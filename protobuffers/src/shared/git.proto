@@ -1,0 +1,22 @@
+syntax="proto3";
+
+package repo.dto;
+
+message CloneDTO  {
+    repeated string entries = 1;
+    string root = 2;
+    string repository = 3;
+};
+message LocalDeleteDTO  {
+    bool result = 1;
+    string repository = 2;
+};
+
+message GetMetaDTO  {
+    string repository = 1;
+    repeated string filenames = 2;
+    repeated string filetypes = 3;
+    string manifest = 4;
+    string lock = 5;
+    string version = 6;
+};

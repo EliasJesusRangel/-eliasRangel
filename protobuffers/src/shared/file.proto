@@ -1,0 +1,9 @@
+syntax="proto3";
+
+package file.dto;
+
+message ReadDTO  {
+    repeated string entries = 1;
+    string root = 2;
+    string package  = 3;
+}

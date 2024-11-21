@@ -1,0 +1,34 @@
+{
+  "name": "protobuffers",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "protobuffers/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "rm -rf dist/debug dist/*.json dist/.*.json dist/*.TAG",
+        "cwd": ".",
+        "target-dir": "../dist"
+      }
+    },
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cargo build",
+        "cwd": "protobuffers",
+        "target-dir": "../dist"
+      }
+    },
+
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cargo build --release",
+        "cwd": "protobuffers",
+        "target-dir": "../dist"
+      }
+    }
+  }
+}

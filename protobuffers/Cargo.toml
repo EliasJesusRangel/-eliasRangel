@@ -1,0 +1,13 @@
+[package]
+name = "protobuffers"
+version = "0.1.0"
+edition = "2021"
+
+[build-dependencies]
+prost-build = "0.13.3"
+
+[dependencies]
+prost = "0.13.3"
+prost-types = "0.13.3"
+
+
