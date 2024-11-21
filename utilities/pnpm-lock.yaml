@@ -1,0 +1,62 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  tree-sitter:
+    specifier: ^0.22.1
+    version: 0.22.1
+  tree-sitter-typescript:
+    specifier: ^0.23.2
+    version: 0.23.2(tree-sitter@0.22.1)
+
+packages:
+
+  /node-addon-api@8.2.2:
+    resolution: {integrity: sha512-9emqXAKhVoNrQ792nLI/wpzPpJ/bj/YXxW0CvAau1+RdGBcCRF1Dmz7719zgVsQNrzHl9Tzn3ImZ4qWFarWL0A==}
+    engines: {node: ^18 || ^20 || >= 21}
+    dev: false
+
+  /node-gyp-build@4.8.3:
+    resolution: {integrity: sha512-EMS95CMJzdoSKoIiXo8pxKoL8DYxwIZXYlLmgPb8KUv794abpnLK6ynsCAWNliOjREKruYKdzbh76HHYUHX7nw==}
+    hasBin: true
+    dev: false
+
+  /tree-sitter-javascript@0.23.1(tree-sitter@0.22.1):
+    resolution: {integrity: sha512-/bnhbrTD9frUYHQTiYnPcxyHORIw157ERBa6dqzaKxvR/x3PC4Yzd+D1pZIMS6zNg2v3a8BZ0oK7jHqsQo9fWA==}
+    requiresBuild: true
+    peerDependencies:
+      tree-sitter: ^0.21.1
+    peerDependenciesMeta:
+      tree-sitter:
+        optional: true
+    dependencies:
+      node-addon-api: 8.2.2
+      node-gyp-build: 4.8.3
+      tree-sitter: 0.22.1
+    dev: false
+
+  /tree-sitter-typescript@0.23.2(tree-sitter@0.22.1):
+    resolution: {integrity: sha512-e04JUUKxTT53/x3Uq1zIL45DoYKVfHH4CZqwgZhPg5qYROl5nQjV+85ruFzFGZxu+QeFVbRTPDRnqL9UbU4VeA==}
+    requiresBuild: true
+    peerDependencies:
+      tree-sitter: ^0.21.0
+    peerDependenciesMeta:
+      tree-sitter:
+        optional: true
+    dependencies:
+      node-addon-api: 8.2.2
+      node-gyp-build: 4.8.3
+      tree-sitter: 0.22.1
+      tree-sitter-javascript: 0.23.1(tree-sitter@0.22.1)
+    dev: false
+
+  /tree-sitter@0.22.1:
+    resolution: {integrity: sha512-gRO+jk2ljxZlIn20QRskIvpLCMtzuLl5T0BY6L9uvPYD17uUrxlxWkvYCiVqED2q2q7CVtY52Uex4WcYo2FEXw==}
+    requiresBuild: true
+    dependencies:
+      node-addon-api: 8.2.2
+      node-gyp-build: 4.8.3
+    dev: false

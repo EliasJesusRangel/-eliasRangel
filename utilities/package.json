@@ -1,0 +1,11 @@
+{
+  "name": "@elias-rangel/utilities",
+  "version": "0.0.1",
+  "dependencies": {
+    "tree-sitter": "^0.22.1",
+    "tree-sitter-typescript": "^0.23.2"
+  },
+  "main": "./index.cjs",
+  "module": "./index.js",
+  "private": true
+}
