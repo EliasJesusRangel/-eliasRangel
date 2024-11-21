@@ -1,0 +1,38 @@
+{
+  "name": "tauri",
+
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "tauri/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tauri dev --",
+        "cwd": "tauri",
+        "target-dir": "../dist"
+      },
+      "dependsOn": ["build:protobuffers"]
+    },
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tauri build --",
+        "cwd": "tauri",
+        "target-dir": "../dist"
+      },
+      "dependsOn": ["build:protobuffers"]
+    },
+
+    "build:release": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tauri build --release --",
+        "cwd": "tauri",
+        "target-dir": "../dist"
+      },
+      "dependsOn": ["build:protobuffers"]
+    }
+  }
+}
